@@ -1,0 +1,13 @@
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+default       firstpod-5fc8f44d5b-qg469                  1/1     Running   0          9m33s
+kube-system   calico-kube-controllers-74677b4c5f-stf76   1/1     Running   0          22h
+kube-system   calico-node-nwpg7                          1/1     Running   0          22h
+kube-system   calico-node-wzcvm                          1/1     Running   0          22h
+kube-system   coredns-565d847f94-pn2jk                   1/1     Running   0          22h
+kube-system   coredns-565d847f94-shxrq                   1/1     Running   0          22h
+kube-system   etcd-ip-10-0-0-183                         1/1     Running   0          22h
+kube-system   kube-apiserver-ip-10-0-0-183               1/1     Running   0          22h
+kube-system   kube-controller-manager-ip-10-0-0-183      1/1     Running   0          22h
+kube-system   kube-proxy-7wsw9                           1/1     Running   0          22h
+kube-system   kube-proxy-dgfp7                           1/1     Running   0          22h
+kube-system   kube-scheduler-ip-10-0-0-183               1/1     Running   0          22h

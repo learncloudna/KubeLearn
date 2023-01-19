@@ -1,0 +1,765 @@
+/k8scp_run does not exist. Running  script
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2327 kB]
+Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [402 kB]
+Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.2 kB]
+Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1550 kB]
+Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [218 kB]
+Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [616 B]
+Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1014 kB]
+Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [235 kB]
+Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.2 kB]
+Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [25.2 kB]
+Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7408 B]
+Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [604 B]
+Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [45.7 kB]
+Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1420 B]
+Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [24.9 kB]
+Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.3 kB]
+Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
+Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:31 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1950 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [319 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.7 kB]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1450 kB]
+Get:35 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [205 kB]
+Get:36 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [616 B]
+Get:37 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [783 kB]
+Get:38 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [152 kB]
+Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [16.9 kB]
+Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:41 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5464 B]
+Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [516 B]
+Fetched 25.5 MB in 4s (6363 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+35 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following NEW packages will be installed:
+  linux-aws-5.15-headers-5.15.0-1028 linux-headers-5.15.0-1028-aws
+  linux-image-5.15.0-1028-aws linux-modules-5.15.0-1028-aws
+The following packages will be upgraded:
+  curl git git-man grub-common grub-efi-amd64-bin grub-efi-amd64-signed
+  grub-pc grub-pc-bin grub2-common libasn1-8-heimdal libcurl3-gnutls libcurl4
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libksba8
+  libroken18-heimdal libwind0-heimdal linux-aws linux-headers-aws
+  linux-image-aws open-vm-tools python-apt-common python3-apt
+  python3-update-manager update-manager-core update-notifier-common vim
+  vim-common vim-runtime vim-tiny xxd
+35 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+23 standard LTS security updates
+Need to get 68.7 MB of archives.
+After this operation, 238 MB of additional disk space will be used.
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python-apt-common all 2.0.1 [17.0 kB]
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apt amd64 2.0.1 [154 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 update-manager-core all 1:20.04.10.11 [11.6 kB]
+Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-update-manager all 1:20.04.10.11 [38.0 kB]
+Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 update-notifier-common all 3.192.30.14 [174 kB]
+Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 open-vm-tools amd64 2:11.3.0-2ubuntu0~ubuntu20.04.4 [647 kB]
+Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.11 [1240 kB]
+Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-tiny amd64 2:8.1.2269-1ubuntu5.11 [578 kB]
+Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.11 [5873 kB]
+Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.11 [50.1 kB]
+Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.11 [85.1 kB]
+Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.15 [161 kB]
+Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.15 [235 kB]
+Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.7 [887 kB]
+Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl3-gnutls amd64 7.68.0-1ubuntu2.15 [232 kB]
+Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.7 [4541 kB]
+Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-pc amd64 2.04-1ubuntu26.16 [125 kB]
+Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub2-common amd64 2.04-1ubuntu26.16 [590 kB]
+Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-pc-bin amd64 2.04-1ubuntu26.16 [971 kB]
+Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-common amd64 2.04-1ubuntu26.16 [1878 kB]
+Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-efi-amd64-signed amd64 1.173.4+2.04-1ubuntu47.5 [1333 kB]
+Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-efi-amd64-bin amd64 2.04-1ubuntu47.5 [1584 kB]
+Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libroken18-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [42.6 kB]
+Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasn1-8-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [181 kB]
+Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libheimbase1-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [30.4 kB]
+Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libhcrypto4-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [88.1 kB]
+Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libwind0-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [47.9 kB]
+Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libhx509-5-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [107 kB]
+Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5-26-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [208 kB]
+Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libheimntlm0-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [15.1 kB]
+Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgssapi3-heimdal amd64 7.7.0+dfsg-1ubuntu1.3 [96.6 kB]
+Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libksba8 amd64 1.3.5-2ubuntu0.20.04.2 [95.2 kB]
+Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-modules-5.15.0-1028-aws amd64 5.15.0-1028.32~20.04.1 [20.3 MB]
+Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-image-5.15.0-1028-aws amd64 5.15.0-1028.32~20.04.1 [11.3 MB]
+Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-aws amd64 5.15.0.1028.32~20.04.17 [1932 B]
+Get:36 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-image-aws amd64 5.15.0.1028.32~20.04.17 [2560 B]
+Get:37 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-aws-5.15-headers-5.15.0-1028 all 5.15.0-1028.32~20.04.1 [12.0 MB]
+Get:38 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-headers-5.15.0-1028-aws amd64 5.15.0-1028.32~20.04.1 [2732 kB]
+Get:39 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-headers-aws amd64 5.15.0.1028.32~20.04.17 [2488 B]
+Preconfiguring packages ...
+Fetched 68.7 MB in 2s (43.5 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 61835 files and directories currently installed.)
+Preparing to unpack .../00-python-apt-common_2.0.1_all.deb ...
+Unpacking python-apt-common (2.0.1) over (2.0.0ubuntu0.20.04.8) ...
+Preparing to unpack .../01-python3-apt_2.0.1_amd64.deb ...
+Unpacking python3-apt (2.0.1) over (2.0.0ubuntu0.20.04.8) ...
+Preparing to unpack .../02-update-manager-core_1%3a20.04.10.11_all.deb ...
+Unpacking update-manager-core (1:20.04.10.11) over (1:20.04.10.10) ...
+Preparing to unpack .../03-python3-update-manager_1%3a20.04.10.11_all.deb ...
+Unpacking python3-update-manager (1:20.04.10.11) over (1:20.04.10.10) ...
+Preparing to unpack .../04-update-notifier-common_3.192.30.14_all.deb ...
+Unpacking update-notifier-common (3.192.30.14) over (3.192.30.11) ...
+Preparing to unpack .../05-open-vm-tools_2%3a11.3.0-2ubuntu0~ubuntu20.04.4_amd64.deb ...
+Unpacking open-vm-tools (2:11.3.0-2ubuntu0~ubuntu20.04.4) over (2:11.3.0-2ubuntu0~ubuntu20.04.3) ...
+Preparing to unpack .../06-vim_2%3a8.1.2269-1ubuntu5.11_amd64.deb ...
+Unpacking vim (2:8.1.2269-1ubuntu5.11) over (2:8.1.2269-1ubuntu5.9) ...
+Preparing to unpack .../07-vim-tiny_2%3a8.1.2269-1ubuntu5.11_amd64.deb ...
+Unpacking vim-tiny (2:8.1.2269-1ubuntu5.11) over (2:8.1.2269-1ubuntu5.9) ...
+Preparing to unpack .../08-vim-runtime_2%3a8.1.2269-1ubuntu5.11_all.deb ...
+Unpacking vim-runtime (2:8.1.2269-1ubuntu5.11) over (2:8.1.2269-1ubuntu5.9) ...
+Preparing to unpack .../09-xxd_2%3a8.1.2269-1ubuntu5.11_amd64.deb ...
+Unpacking xxd (2:8.1.2269-1ubuntu5.11) over (2:8.1.2269-1ubuntu5.9) ...
+Preparing to unpack .../10-vim-common_2%3a8.1.2269-1ubuntu5.11_all.deb ...
+Unpacking vim-common (2:8.1.2269-1ubuntu5.11) over (2:8.1.2269-1ubuntu5.9) ...
+Preparing to unpack .../11-curl_7.68.0-1ubuntu2.15_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.14) ...
+Preparing to unpack .../12-libcurl4_7.68.0-1ubuntu2.15_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.14) ...
+Preparing to unpack .../13-git-man_1%3a2.25.1-1ubuntu3.7_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.7) over (1:2.25.1-1ubuntu3.6) ...
+Preparing to unpack .../14-libcurl3-gnutls_7.68.0-1ubuntu2.15_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.15) over (7.68.0-1ubuntu2.14) ...
+Preparing to unpack .../15-git_1%3a2.25.1-1ubuntu3.7_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.7) over (1:2.25.1-1ubuntu3.6) ...
+Preparing to unpack .../16-grub-pc_2.04-1ubuntu26.16_amd64.deb ...
+Unpacking grub-pc (2.04-1ubuntu26.16) over (2.04-1ubuntu26.15) ...
+Preparing to unpack .../17-grub2-common_2.04-1ubuntu26.16_amd64.deb ...
+Unpacking grub2-common (2.04-1ubuntu26.16) over (2.04-1ubuntu26.15) ...
+Preparing to unpack .../18-grub-pc-bin_2.04-1ubuntu26.16_amd64.deb ...
+Unpacking grub-pc-bin (2.04-1ubuntu26.16) over (2.04-1ubuntu26.15) ...
+Preparing to unpack .../19-grub-common_2.04-1ubuntu26.16_amd64.deb ...
+Unpacking grub-common (2.04-1ubuntu26.16) over (2.04-1ubuntu26.15) ...
+Preparing to unpack .../20-grub-efi-amd64-signed_1.173.4+2.04-1ubuntu47.5_amd64.deb ...
+Unpacking grub-efi-amd64-signed (1.173.4+2.04-1ubuntu47.5) over (1.173.2~20.04.1+2.04-1ubuntu47.4) ...
+Preparing to unpack .../21-grub-efi-amd64-bin_2.04-1ubuntu47.5_amd64.deb ...
+Unpacking grub-efi-amd64-bin (2.04-1ubuntu47.5) over (2.04-1ubuntu47.4) ...
+Preparing to unpack .../22-libroken18-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../23-libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../24-libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../25-libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../26-libwind0-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../27-libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../28-libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../29-libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../30-libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1.3_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) over (7.7.0+dfsg-1ubuntu1.2) ...
+Preparing to unpack .../31-libksba8_1.3.5-2ubuntu0.20.04.2_amd64.deb ...
+Unpacking libksba8:amd64 (1.3.5-2ubuntu0.20.04.2) over (1.3.5-2ubuntu0.20.04.1) ...
+Selecting previously unselected package linux-modules-5.15.0-1028-aws.
+Preparing to unpack .../32-linux-modules-5.15.0-1028-aws_5.15.0-1028.32~20.04.1_amd64.deb ...
+Unpacking linux-modules-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+Selecting previously unselected package linux-image-5.15.0-1028-aws.
+Preparing to unpack .../33-linux-image-5.15.0-1028-aws_5.15.0-1028.32~20.04.1_amd64.deb ...
+Unpacking linux-image-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+Preparing to unpack .../34-linux-aws_5.15.0.1028.32~20.04.17_amd64.deb ...
+Unpacking linux-aws (5.15.0.1028.32~20.04.17) over (5.15.0.1026.30~20.04.16) ...
+Preparing to unpack .../35-linux-image-aws_5.15.0.1028.32~20.04.17_amd64.deb ...
+Unpacking linux-image-aws (5.15.0.1028.32~20.04.17) over (5.15.0.1026.30~20.04.16) ...
+Selecting previously unselected package linux-aws-5.15-headers-5.15.0-1028.
+Preparing to unpack .../36-linux-aws-5.15-headers-5.15.0-1028_5.15.0-1028.32~20.04.1_all.deb ...
+Unpacking linux-aws-5.15-headers-5.15.0-1028 (5.15.0-1028.32~20.04.1) ...
+Selecting previously unselected package linux-headers-5.15.0-1028-aws.
+Preparing to unpack .../37-linux-headers-5.15.0-1028-aws_5.15.0-1028.32~20.04.1_amd64.deb ...
+Unpacking linux-headers-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+Preparing to unpack .../38-linux-headers-aws_5.15.0.1028.32~20.04.17_amd64.deb ...
+Unpacking linux-headers-aws (5.15.0.1028.32~20.04.17) over (5.15.0.1026.30~20.04.16) ...
+Setting up libksba8:amd64 (1.3.5-2ubuntu0.20.04.2) ...
+Setting up linux-aws-5.15-headers-5.15.0-1028 (5.15.0-1028.32~20.04.1) ...
+Setting up libcurl3-gnutls:amd64 (7.68.0-1ubuntu2.15) ...
+Setting up xxd (2:8.1.2269-1ubuntu5.11) ...
+Setting up grub-common (2.04-1ubuntu26.16) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up vim-common (2:8.1.2269-1ubuntu5.11) ...
+Setting up libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up python-apt-common (2.0.1) ...
+Setting up open-vm-tools (2:11.3.0-2ubuntu0~ubuntu20.04.4) ...
+Setting up linux-headers-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.15) ...
+Setting up git-man (1:2.25.1-1ubuntu3.7) ...
+Setting up curl (7.68.0-1ubuntu2.15) ...
+Setting up vim-runtime (2:8.1.2269-1ubuntu5.11) ...
+Setting up grub-efi-amd64-bin (2.04-1ubuntu47.5) ...
+Setting up libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up vim (2:8.1.2269-1ubuntu5.11) ...
+Setting up grub2-common (2.04-1ubuntu26.16) ...
+Setting up python3-apt (2.0.1) ...
+Setting up libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up linux-headers-aws (5.15.0.1028.32~20.04.17) ...
+Setting up vim-tiny (2:8.1.2269-1ubuntu5.11) ...
+Setting up libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up grub-pc-bin (2.04-1ubuntu26.16) ...
+Setting up grub-pc (2.04-1ubuntu26.16) ...
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/40-force-partuuid.cfg'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+GRUB_FORCE_PARTUUID is set, will attempt initrdless boot
+Found linux image: /boot/vmlinuz-5.15.0-1028-aws
+Found initrd image: /boot/microcode.cpio
+Found linux image: /boot/vmlinuz-5.15.0-1026-aws
+Found initrd image: /boot/microcode.cpio /boot/initrd.img-5.15.0-1026-aws
+Found Ubuntu 20.04.5 LTS (20.04) on /dev/xvda1
+done
+Setting up libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up git (1:2.25.1-1ubuntu3.7) ...
+Setting up python3-update-manager (1:20.04.10.11) ...
+Setting up grub-efi-amd64-signed (1.173.4+2.04-1ubuntu47.5) ...
+Trying to migrate /boot/efi into esp config
+Unknown device "/dev/disk/by-id/*": No such file or directory
+Installing grub to /boot/efi.
+Installing for x86_64-efi platform.
+grub-install: warning: EFI variables are not supported on this system..
+Installation finished. No error reported.
+Setting up libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up update-manager-core (1:20.04.10.11) ...
+Setting up libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up update-notifier-common (3.192.30.14) ...
+Setting up libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.3) ...
+Setting up linux-image-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.15.0-1028-aws
+I: /boot/initrd.img is now a symlink to initrd.img-5.15.0-1028-aws
+Setting up linux-image-aws (5.15.0.1028.32~20.04.17) ...
+Setting up linux-aws (5.15.0.1028.32~20.04.17) ...
+Setting up linux-modules-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for systemd (245.4-4ubuntu3.19) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for linux-image-5.15.0-1028-aws (5.15.0-1028.32~20.04.1) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.15.0-1028-aws
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/40-force-partuuid.cfg'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+GRUB_FORCE_PARTUUID is set, will attempt initrdless boot
+Found linux image: /boot/vmlinuz-5.15.0-1028-aws
+Found initrd image: /boot/microcode.cpio /boot/initrd.img-5.15.0-1028-aws
+Found linux image: /boot/vmlinuz-5.15.0-1026-aws
+Found initrd image: /boot/microcode.cpio /boot/initrd.img-5.15.0-1026-aws
+Found Ubuntu 20.04.5 LTS (20.04) on /dev/xvda1
+done
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20211016ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.15).
+curl set to manually installed.
+git is already the newest version (1:2.25.1-1ubuntu3.7).
+git set to manually installed.
+software-properties-common is already the newest version (0.99.9.8).
+software-properties-common set to manually installed.
+vim is already the newest version (2:8.1.2269-1ubuntu5.11).
+vim set to manually installed.
+wget is already the newest version (1.20.3-1ubuntu2).
+wget set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https gnupg2
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7020 B of archives.
+After this operation, 213 kB of additional disk space will be used.
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1704 B]
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 gnupg2 all 2.2.19-3ubuntu2.2 [5316 B]
+Fetched 7020 B in 0s (245 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 90614 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.9_all.deb ...
+Unpacking apt-transport-https (2.0.9) ...
+Selecting previously unselected package gnupg2.
+Preparing to unpack .../gnupg2_2.2.19-3ubuntu2.2_all.deb ...
+Unpacking gnupg2 (2.2.19-3ubuntu2.2) ...
+Setting up gnupg2 (2.2.19-3ubuntu2.2) ...
+Setting up apt-transport-https (2.0.9) ...
+Processing triggers for man-db (2.9.1-1) ...
+OK
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [62.2 kB]
+Fetched 71.2 kB in 1s (134 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  conntrack cri-tools ebtables kubernetes-cni socat
+Suggested packages:
+  nftables
+The following NEW packages will be installed:
+  conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 81.6 MB of archives.
+After this operation, 327 MB of additional disk space will be used.
+Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.25.0-00 [17.9 MB]
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.1.1-00 [25.0 MB]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.25.1-00 [19.5 MB]
+Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.25.1-00 [9503 kB]
+Get:8 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.25.1-00 [9215 kB]
+Fetched 81.6 MB in 3s (25.2 MB/s)
+Selecting previously unselected package conntrack.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 90624 files and directories currently installed.)
+Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+Unpacking conntrack (1:1.4.5-2) ...
+Selecting previously unselected package cri-tools.
+Preparing to unpack .../1-cri-tools_1.25.0-00_amd64.deb ...
+Unpacking cri-tools (1.25.0-00) ...
+Selecting previously unselected package ebtables.
+Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+Unpacking ebtables (2.0.11-3build1) ...
+Selecting previously unselected package kubernetes-cni.
+Preparing to unpack .../3-kubernetes-cni_1.1.1-00_amd64.deb ...
+Unpacking kubernetes-cni (1.1.1-00) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+Unpacking socat (1.7.3.3-2) ...
+Selecting previously unselected package kubelet.
+Preparing to unpack .../5-kubelet_1.25.1-00_amd64.deb ...
+Unpacking kubelet (1.25.1-00) ...
+Selecting previously unselected package kubectl.
+Preparing to unpack .../6-kubectl_1.25.1-00_amd64.deb ...
+Unpacking kubectl (1.25.1-00) ...
+Selecting previously unselected package kubeadm.
+Preparing to unpack .../7-kubeadm_1.25.1-00_amd64.deb ...
+Unpacking kubeadm (1.25.1-00) ...
+Setting up conntrack (1:1.4.5-2) ...
+Setting up kubectl (1.25.1-00) ...
+Setting up ebtables (2.0.11-3build1) ...
+Setting up socat (1.7.3.3-2) ...
+Setting up cri-tools (1.25.0-00) ...
+Setting up kubernetes-cni (1.1.1-00) ...
+Setting up kubelet (1.25.1-00) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+Setting up kubeadm (1.25.1-00) ...
+Processing triggers for man-db (2.9.1-1) ...
+kubelet set on hold.
+kubeadm set on hold.
+kubectl set on hold.
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+* Applying /etc/sysctl.d/10-console-messages.conf ...
+kernel.printk = 4 4 1 7
+* Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+net.ipv6.conf.all.use_tempaddr = 2
+net.ipv6.conf.default.use_tempaddr = 2
+* Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+kernel.kptr_restrict = 1
+* Applying /etc/sysctl.d/10-link-restrictions.conf ...
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+kernel.sysrq = 176
+* Applying /etc/sysctl.d/10-network-security.conf ...
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+* Applying /etc/sysctl.d/10-ptrace.conf ...
+kernel.yama.ptrace_scope = 1
+* Applying /etc/sysctl.d/10-zeropage.conf ...
+vm.mmap_min_addr = 65536
+* Applying /usr/lib/sysctl.d/50-default.conf ...
+net.ipv4.conf.default.promote_secondaries = 1
+net.ipv4.ping_group_range = 0 2147483647
+net.core.default_qdisc = fq_codel
+fs.protected_regular = 1
+fs.protected_fifos = 1
+* Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+kernel.pid_max = 4194304
+* Applying /etc/sysctl.d/99-cloudimg-ipv6.conf ...
+net.ipv6.conf.all.use_tempaddr = 0
+net.ipv6.conf.default.use_tempaddr = 0
+* Applying /etc/sysctl.d/99-sysctl.conf ...
+* Applying /etc/sysctl.d/kubernetes.conf ...
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+* Applying /usr/lib/sysctl.d/protect-links.conf ...
+fs.protected_fifos = 1
+fs.protected_hardlinks = 1
+fs.protected_regular = 2
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.conf ...
+overlay
+br_netfilter
+* Applying /etc/sysctl.d/10-console-messages.conf ...
+kernel.printk = 4 4 1 7
+* Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+net.ipv6.conf.all.use_tempaddr = 2
+net.ipv6.conf.default.use_tempaddr = 2
+* Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+kernel.kptr_restrict = 1
+* Applying /etc/sysctl.d/10-link-restrictions.conf ...
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+kernel.sysrq = 176
+* Applying /etc/sysctl.d/10-network-security.conf ...
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+* Applying /etc/sysctl.d/10-ptrace.conf ...
+kernel.yama.ptrace_scope = 1
+* Applying /etc/sysctl.d/10-zeropage.conf ...
+vm.mmap_min_addr = 65536
+* Applying /usr/lib/sysctl.d/50-default.conf ...
+net.ipv4.conf.default.promote_secondaries = 1
+net.ipv4.ping_group_range = 0 2147483647
+net.core.default_qdisc = fq_codel
+fs.protected_regular = 1
+fs.protected_fifos = 1
+* Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+kernel.pid_max = 4194304
+* Applying /etc/sysctl.d/99-cloudimg-ipv6.conf ...
+net.ipv6.conf.all.use_tempaddr = 0
+net.ipv6.conf.default.use_tempaddr = 0
+* Applying /etc/sysctl.d/99-sysctl.conf ...
+* Applying /etc/sysctl.d/kubernetes.conf ...
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+* Applying /usr/lib/sysctl.d/protect-links.conf ...
+fs.protected_fifos = 1
+fs.protected_hardlinks = 1
+fs.protected_regular = 2
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.conf ...
+OK
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:4 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]
+Hit:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Hit:6 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:7 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [22.5 kB]
+Fetched 80.2 kB in 1s (148 kB/s)
+Reading package lists...
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 https://download.docker.com/linux/ubuntu focal InRelease
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]
+Hit:6 http://security.ubuntu.com/ubuntu focal-security InRelease
+Fetched 8993 B in 1s (16.2 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  containerd.io
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 27.7 MB of archives.
+After this operation, 114 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.6.15-1 [27.7 MB]
+Fetched 27.7 MB in 1s (43.7 MB/s)
+Selecting previously unselected package containerd.io.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 90717 files and directories currently installed.)
+Preparing to unpack .../containerd.io_1.6.15-1_amd64.deb ...
+Unpacking containerd.io (1.6.15-1) ...
+Setting up containerd.io (1.6.15-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Processing triggers for man-db (2.9.1-1) ...
+disabled_plugins = []
+imports = []
+oom_score = 0
+plugin_dir = ""
+required_plugins = []
+root = "/var/lib/containerd"
+state = "/run/containerd"
+temp = ""
+version = 2
+
+[cgroup]
+  path = ""
+
+[debug]
+  address = ""
+  format = ""
+  gid = 0
+  level = ""
+  uid = 0
+
+[grpc]
+  address = "/run/containerd/containerd.sock"
+  gid = 0
+  max_recv_message_size = 16777216
+  max_send_message_size = 16777216
+  tcp_address = ""
+  tcp_tls_ca = ""
+  tcp_tls_cert = ""
+  tcp_tls_key = ""
+  uid = 0
+
+[metrics]
+  address = ""
+  grpc_histogram = false
+
+[plugins]
+
+  [plugins."io.containerd.gc.v1.scheduler"]
+    deletion_threshold = 0
+    mutation_threshold = 100
+    pause_threshold = 0.02
+    schedule_delay = "0s"
+    startup_delay = "100ms"
+
+  [plugins."io.containerd.grpc.v1.cri"]
+    device_ownership_from_security_context = false
+    disable_apparmor = false
+    disable_cgroup = false
+    disable_hugetlb_controller = true
+    disable_proc_mount = false
+    disable_tcp_service = true
+    enable_selinux = false
+    enable_tls_streaming = false
+    enable_unprivileged_icmp = false
+    enable_unprivileged_ports = false
+    ignore_image_defined_volumes = false
+    max_concurrent_downloads = 3
+    max_container_log_line_size = 16384
+    netns_mounts_under_state_dir = false
+    restrict_oom_score_adj = false
+    sandbox_image = "registry.k8s.io/pause:3.6"
+    selinux_category_range = 1024
+    stats_collect_period = 10
+    stream_idle_timeout = "4h0m0s"
+    stream_server_address = "127.0.0.1"
+    stream_server_port = "0"
+    systemd_cgroup = false
+    tolerate_missing_hugetlb_controller = true
+    unset_seccomp_profile = ""
+
+    [plugins."io.containerd.grpc.v1.cri".cni]
+      bin_dir = "/opt/cni/bin"
+      conf_dir = "/etc/cni/net.d"
+      conf_template = ""
+      ip_pref = ""
+      max_conf_num = 1
+
+    [plugins."io.containerd.grpc.v1.cri".containerd]
+      default_runtime_name = "runc"
+      disable_snapshot_annotations = true
+      discard_unpacked_layers = false
+      ignore_rdt_not_enabled_errors = false
+      no_pivot = false
+      snapshotter = "overlayfs"
+
+      [plugins."io.containerd.grpc.v1.cri".containerd.default_runtime]
+        base_runtime_spec = ""
+        cni_conf_dir = ""
+        cni_max_conf_num = 0
+        container_annotations = []
+        pod_annotations = []
+        privileged_without_host_devices = false
+        runtime_engine = ""
+        runtime_path = ""
+        runtime_root = ""
+        runtime_type = ""
+
+        [plugins."io.containerd.grpc.v1.cri".containerd.default_runtime.options]
+
+      [plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+
+        [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+          base_runtime_spec = ""
+          cni_conf_dir = ""
+          cni_max_conf_num = 0
+          container_annotations = []
+          pod_annotations = []
+          privileged_without_host_devices = false
+          runtime_engine = ""
+          runtime_path = ""
+          runtime_root = ""
+          runtime_type = "io.containerd.runc.v2"
+
+          [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+            BinaryName = ""
+            CriuImagePath = ""
+            CriuPath = ""
+            CriuWorkPath = ""
+            IoGid = 0
+            IoUid = 0
+            NoNewKeyring = false
+            NoPivotRoot = false
+            Root = ""
+            ShimCgroup = ""
+            SystemdCgroup = false
+
+      [plugins."io.containerd.grpc.v1.cri".containerd.untrusted_workload_runtime]
+        base_runtime_spec = ""
+        cni_conf_dir = ""
+        cni_max_conf_num = 0
+        container_annotations = []
+        pod_annotations = []
+        privileged_without_host_devices = false
+        runtime_engine = ""
+        runtime_path = ""
+        runtime_root = ""
+        runtime_type = ""
+
+        [plugins."io.containerd.grpc.v1.cri".containerd.untrusted_workload_runtime.options]
+
+    [plugins."io.containerd.grpc.v1.cri".image_decryption]
+      key_model = "node"
+
+    [plugins."io.containerd.grpc.v1.cri".registry]
+      config_path = ""
+
+      [plugins."io.containerd.grpc.v1.cri".registry.auths]
+
+      [plugins."io.containerd.grpc.v1.cri".registry.configs]
+
+      [plugins."io.containerd.grpc.v1.cri".registry.headers]
+
+      [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+
+    [plugins."io.containerd.grpc.v1.cri".x509_key_pair_streaming]
+      tls_cert_file = ""
+      tls_key_file = ""
+
+  [plugins."io.containerd.internal.v1.opt"]
+    path = "/opt/containerd"
+
+  [plugins."io.containerd.internal.v1.restart"]
+    interval = "10s"
+
+  [plugins."io.containerd.internal.v1.tracing"]
+    sampling_ratio = 1.0
+    service_name = "containerd"
+
+  [plugins."io.containerd.metadata.v1.bolt"]
+    content_sharing_policy = "shared"
+
+  [plugins."io.containerd.monitor.v1.cgroups"]
+    no_prometheus = false
+
+  [plugins."io.containerd.runtime.v1.linux"]
+    no_shim = false
+    runtime = "runc"
+    runtime_root = ""
+    shim = "containerd-shim"
+    shim_debug = false
+
+  [plugins."io.containerd.runtime.v2.task"]
+    platforms = ["linux/amd64"]
+    sched_core = false
+
+  [plugins."io.containerd.service.v1.diff-service"]
+    default = ["walking"]
+
+  [plugins."io.containerd.service.v1.tasks-service"]
+    rdt_config_file = ""
+
+  [plugins."io.containerd.snapshotter.v1.aufs"]
+    root_path = ""
+
+  [plugins."io.containerd.snapshotter.v1.btrfs"]
+    root_path = ""
+
+  [plugins."io.containerd.snapshotter.v1.devmapper"]
+    async_remove = false
+    base_image_size = ""
+    discard_blocks = false
+    fs_options = ""
+    fs_type = ""
+    pool_name = ""
+    root_path = ""
+
+  [plugins."io.containerd.snapshotter.v1.native"]
+    root_path = ""
+
+  [plugins."io.containerd.snapshotter.v1.overlayfs"]
+    root_path = ""
+    upperdir_label = false
+
+  [plugins."io.containerd.snapshotter.v1.zfs"]
+    root_path = ""
+
+  [plugins."io.containerd.tracing.processor.v1.otlp"]
+    endpoint = ""
+    insecure = false
+    protocol = ""
+
+[proxy_plugins]
+
+[stream_processors]
+
+  [stream_processors."io.containerd.ocicrypt.decoder.v1.tar"]
+    accepts = ["application/vnd.oci.image.layer.v1.tar+encrypted"]
+    args = ["--decryption-keys-path", "/etc/containerd/ocicrypt/keys"]
+    env = ["OCICRYPT_KEYPROVIDER_CONFIG=/etc/containerd/ocicrypt/ocicrypt_keyprovider.conf"]
+    path = "ctd-decoder"
+    returns = "application/vnd.oci.image.layer.v1.tar"
+
+  [stream_processors."io.containerd.ocicrypt.decoder.v1.tar.gzip"]
+    accepts = ["application/vnd.oci.image.layer.v1.tar+gzip+encrypted"]
+    args = ["--decryption-keys-path", "/etc/containerd/ocicrypt/keys"]
+    env = ["OCICRYPT_KEYPROVIDER_CONFIG=/etc/containerd/ocicrypt/ocicrypt_keyprovider.conf"]
+    path = "ctd-decoder"
+    returns = "application/vnd.oci.image.layer.v1.tar+gzip"
+
+[timeouts]
+  "io.containerd.timeout.bolt.open" = "0s"
+  "io.containerd.timeout.shim.cleanup" = "5s"
+  "io.containerd.timeout.shim.load" = "5s"
+  "io.containerd.timeout.shim.shutdown" = "3s"
+  "io.containerd.timeout.task.state" = "2s"
+
+[ttrpc]
+  address = ""
+  gid = 0
+  uid = 0
+
+
+***************************
+
+Continue to the next step
+
+Use sudo and copy over kubeadm join command from
+control plane.
+
+***************************
+
+
