@@ -1,0 +1,5 @@
+curl $(kubectl get svc | grep registry | awk '{print $3}'):5000/v2/_catalog
+{"repositories":[]}
+
+
+
