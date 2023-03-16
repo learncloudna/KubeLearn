@@ -1,5 +1,5 @@
 #!/bin/bash
-################# LFD259:2022-11-23 s_02/k8sWorker.sh ################
+################# LFD459:1.25.1 s_02/k8sWorker.sh ################
 # The code herein is: Copyright the Linux Foundation, 2022
 #
 # This Copyright is retained for the purpose of protecting free
@@ -10,9 +10,9 @@
 #
 # This code is distributed under Version 2 of the GNU General Public
 # License, which you should have received with the source.
-#Version 1.25.1
+#Version 1.26.1
 #
-# This script is intended to be run on an Ubuntu 20.04, 
+# This script is intended to be run on an Ubuntu 20.04,
 # 2cpu, 8G.
 # By Tim Serewicz, 10/2022 GPL
 
@@ -29,12 +29,12 @@ if [ -f "$FILE" ]; then
     echo "This should be run on the worker node."
     echo
     exit 1
-else 
+else
     echo "$FILE does not exist. Running  script"
 fi
 
 
-# Create a file when this script is started to keep it from running 
+# Create a file when this script is started to keep it from running
 # on the control plane node.
 sudo touch /k8scp_run
 
@@ -48,15 +48,15 @@ sudo apt install curl apt-transport-https vim git wget gnupg2 software-propertie
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
-# Install the Kubernetes software, and lock the version 
+# Install the Kubernetes software, and lock the version
 sudo apt update
-sudo apt -y install kubelet=1.25.1-00 kubeadm=1.25.1-00 kubectl=1.25.1-00
+sudo apt -y install kubelet=1.26.1-00 kubeadm=1.26.1-00 kubectl=1.26.1-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # Ensure Kubelet is running
 sudo systemctl enable --now kubelet
 
-# Disable swap just in case 
+# Disable swap just in case
 sudo swapoff -a
 
 # Ensure Kernel has modules
@@ -74,7 +74,7 @@ sudo sysctl --system
 
 # Configure containerd settings
 ￼
-cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf 
+cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
 EOF
@@ -90,8 +90,23 @@ sudo apt install containerd.io -y
 # Configure containerd and restart
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
+sudo sed -e 's/SystemdCgroup = false/SystemdCgroup = true/g' -i /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl enable containerd
+
+# Install and configure crictl
+export VER="v1.26.0"
+
+wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VER/crictl-$VER-linux-amd64.tar.gz
+
+tar zxvf crictl-$VER-linux-amd64.tar.gz
+
+sudo mv crictl /usr/local/bin
+
+# Set the endpoints to avoid the deprecation error
+sudo crictl config --set \
+runtime-endpoint=unix:///run/containerd/containerd.sock \
+--set image-endpoint=unix:///run/containerd/containerd.sock
 
 
 # Ready to continue
@@ -108,3 +123,4 @@ echo
 echo '***************************'
 echo
 echo
+

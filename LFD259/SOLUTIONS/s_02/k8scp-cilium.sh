@@ -1,6 +1,6 @@
 #!/bin/bash
-################# LFD259:2022-11-23 s_02/k8scp-cilium.sh ################
-# The code herein is: Copyright the Linux Foundation, 2022
+################# LFD259:2023-02-28 s_02/k8scp-cilium.sh ################
+# The code herein is: Copyright the Linux Foundation, 2023
 #
 # This Copyright is retained for the purpose of protecting free
 # redistribution of source.

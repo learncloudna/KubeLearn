@@ -30,6 +30,7 @@ items:
       io.kompose.service: registry
     name: registry
   spec:
+    clusterIP: 10.97.40.62
     ports:
     - name: "5000"
       port: 5000

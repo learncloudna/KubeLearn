@@ -1,5 +1,5 @@
 #!/bin/bash
-################# LFD259:2022-11-23 s_02/k8scp.sh ################
+################# LFD459:1.25.1 s_02/k8scp.sh ################
 # The code herein is: Copyright the Linux Foundation, 2022
 #
 # This Copyright is retained for the purpose of protecting free
@@ -10,9 +10,9 @@
 #
 # This code is distributed under Version 2 of the GNU General Public
 # License, which you should have received with the source.
-#Version 1.25.1
+#Version 1.26.1
 #
-# This script is intended to be run on an Ubuntu 20.04, 
+# This script is intended to be run on an Ubuntu 20.04,
 # 2cpu, 8G.
 # By Tim Serewicz, 05/2022 GPL
 
@@ -26,14 +26,14 @@ FILE=/k8scp_run
 if [ -f "$FILE" ]; then
     echo "WARNING!"
     echo "$FILE exists. Script has already been run on control plane."
-    echo 
+    echo
     exit 1
-else 
+else
     echo "$FILE does not exist. Running  script"
 fi
 
 
-# Create a file when this script is started to keep it from running 
+# Create a file when this script is started to keep it from running
 # twice on same node
 sudo touch /k8scp_run
 
@@ -47,15 +47,15 @@ sudo apt install curl apt-transport-https vim git wget gnupg2 software-propertie
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
-# Install the Kubernetes software, and lock the version 
+# Install the Kubernetes software, and lock the version
 sudo apt update
-sudo apt -y install kubelet=1.25.1-00 kubeadm=1.25.1-00 kubectl=1.25.1-00
+sudo apt -y install kubelet=1.26.1-00 kubeadm=1.26.1-00 kubectl=1.26.1-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # Ensure Kubelet is running
 sudo systemctl enable --now kubelet
 
-# Disable swap just in case 
+# Disable swap just in case
 sudo swapoff -a
 
 # Ensure Kernel has modules
@@ -73,7 +73,7 @@ sudo sysctl --system
 
 # Configure containerd settings
 ￼
-cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf 
+cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
 EOF
@@ -89,13 +89,14 @@ sudo apt install containerd.io -y
 # Configure containerd and restart
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
+sudo sed -e 's/SystemdCgroup = false/SystemdCgroup = true/g' -i /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 
 
 #  Create the config file so no more errors
 # Install and configure crictl
-export VER="v1.24.0"
+export VER="v1.26.0"
 
 wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VER/crictl-$VER-linux-amd64.tar.gz
 
@@ -109,7 +110,7 @@ runtime-endpoint=unix:///run/containerd/containerd.sock \
 --set image-endpoint=unix:///run/containerd/containerd.sock
 
 # Configure the cluster
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16 
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16 | sudo tee /var/log/kubeinit.log
 
 # Configure the non-root user to use kubectl
 mkdir -p $HOME/.kube
@@ -117,14 +118,14 @@ sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Use Calico as the network plugin
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 
 # Add Helm to make our life easier
 wget https://get.helm.sh/helm-v3.9.0-linux-amd64.tar.gz
 tar -xf helm-v3.9.0-linux-amd64.tar.gz
 sudo cp linux-amd64/helm /usr/local/bin/
 
-
+sleep 9 
 # Output the state of the cluster
 kubectl get node
 
@@ -138,3 +139,4 @@ echo "Continue to the next step"
 echo
 echo '***************************'
 echo
+
