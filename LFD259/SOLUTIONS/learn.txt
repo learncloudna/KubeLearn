@@ -1,5 +1,115 @@
+# P19
+curl -fsSL -o podman-linux-amd64.tar.gz \
+https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-amd64.tar.gz
+tar -xf podman-linux-amd64.tar.gz
+sudo cp -r podman-linux-amd64/usr podman-linux-amd64/etc /
+
+
+# 3.2
+echo "http://$(kubectl get svc | grep registry | awk '{print $3}'):5000/v2/_catalog"
 curl $(kubectl get svc | grep registry | awk '{print $3}'):5000/v2/_catalog
+
+http://10.104.249.43:5000/v2/_catalog
 {"repositories":[]}
+
+sudo vim /etc/containerd/config.toml
+        [plugins."io.containerd.grpc.v1.cri".registry.mirrors."*"]
+          endpoint = ["http://10.104.249.43:5000"]
+
+# P22
+sudo mkdir /etc/containers/registries.conf.d
+cat /etc/containers/registries.conf.d/registry.conf 
+[[registry]]
+location = "10.104.249.43:5000"
+insecure = true
+
+sudo systemctl restart containerd
+sudo systemctl status containerd
+
+echo "export repo=10.104.249.43:5000" >> ~/.bashrc
+source ~/.bashrc
+
+sudo podman pull alpine
+sudo podman tag alpine $repo/tagtest
+sudo podman push $repo/tagtest
+curl $(kubectl get svc | grep registry | awk '{print $3}'):5000/v2/_catalog
+{"repositories":["tagtest"]}
+
+# P23
+sudo podman image rm alpine
+sudo podman image ls
+sudo podman image rm $repo/tagtest
+sudo podman pull $repo/tagtest
+
+# P24
+sudo podman tag simpleapp $repo/simpleapp
+sudo podman push $repo/simpleapp                # TODO: why lost after reboot
+curl $repo/v2/_catalog
+{"repositories":["simpleapp","tagtest"]}
+
+kubectl create deployment try1 --image=$repo/simpleapp
+kubectl scale deployment try1 --replicas=6
+kubectl get pod -o wide
+
+# P25
+sudo crictl ps
+sudo crictl config \
+--set runtime-endpoint=unix:///run/containerd/containerd.sock \
+--set image-endpoint=unix:///run/containerd/containerd.sock
+sudo crictl ps | grep simple
+
+# TODO-Check: ImagePullBackOff, 
+try2-659f96644b-zbw8t       0/1     ImagePullBackOff   0               6s    192.168.66.170   ip-10-0-0-12    <none>           <none>
+
+kubectl describe pod
+  Warning  Failed     30m (x4 over 32m)      kubelet            Failed to pull image "10.104.249.43:5000/simpleapp": rpc error: code = Unknown desc = failed to pull and unpack image "10.104.249.43:5000/simpleapp:latest": failed to resolve reference "10.104.249.43:5000/simpleapp:latest": failed to do request: Head "https://10.104.249.43:5000/v2/simpleapp/manifests/latest": http: server gave HTTP response to HTTPS client
+
+kubectl delete deployments try1
+kubectl create -f simpleapp.yaml 
+kubectl get deployment
+
+# Ex3.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
