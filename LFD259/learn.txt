@@ -8,7 +8,17 @@ sudo reboot
 sudo sh KubeLearn/LFD259/SOLUTIONS/s_02/k8scp.sh
 sudo sh KubeLearn/LFD259/SOLUTIONS/s_02/k8sWorker.sh 
 
-sudo 
+# P04
+sudo apt install -y bash-completion vim
+echo 'source <(kubectl completion bash)' >> ~/.bashrc
+source ~/.bashrc
+
+# P05
+kubectl describe nodes | grep -i taint
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+
+# Ex2.3
+TODO
 
 # P19
 curl -fsSL -o podman-linux-amd64.tar.gz \
