@@ -1,3 +1,15 @@
+# CH2
+sudo apt remove containerd.io kubelet kubeadm kubectl kubernetes-cni
+sudo rm -rf /var/lib/etcd 
+sudo rm -rf /etc/kubernetes/
+sudo rm -rf /k8scp_run 
+sudo reboot
+
+sudo sh KubeLearn/LFD259/SOLUTIONS/s_02/k8scp.sh
+sudo sh KubeLearn/LFD259/SOLUTIONS/s_02/k8sWorker.sh 
+
+sudo 
+
 # P19
 curl -fsSL -o podman-linux-amd64.tar.gz \
 https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-amd64.tar.gz
